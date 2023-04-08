@@ -1,17 +1,76 @@
 body {
     padding: 0;
     margin: 0;
-    background: grey;
+    background: #9C835F;
+    font-family: Open Sans;
 }
 
 header {
-    width: 100%;
+    width: 97%;
     height: 50px;
-    margin: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    padding-left: 20px;
+    align-items: center;
     font-size: 15px;
-    background: black;
-    color: aliceblue;
+    color: #F9B23D;
+    font-family: Open sans;
+    font-weight: bold;
+}
+
+.gotoback {
+    color: #724C21;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+img {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.header h3 {
+    font-size: 15px;
+    color: #724C21;
+}
+
+section.gamesuit {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50%;
+    font-family: Open Sans;
+}
+
+.player1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 20%;
+}
+
+.handimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.com {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 20%;
+}
+
+.vs {
+    padding-top: 8%;
+    color: red;
+    font-size: 100px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
 }
