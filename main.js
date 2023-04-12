@@ -7,3 +7,7 @@ class Start {
         this.wingame = ""
     }
 }
+
+function OptionPick(fingger) {
+    const start = new Start();
+}
