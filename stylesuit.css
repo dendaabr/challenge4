@@ -18,10 +18,7 @@ header {
     flex-direction: row;
     padding-left: 20px;
     align-items: center;
-    font-size: 15px;
-    color: #F9B23D;
-    font-family: Open sans;
-    font-weight: bold;
+
 }
 
 .gotoback {
@@ -37,12 +34,25 @@ img {
     justify-content: center;
 }
 
-.header h3 {
-    font-size: 15px;
-    color: #724C21;
+h3 {
+
+    font-size: 25px;
+    color: #F9B23D;
+    font-family: Open sans;
+    font-weight: bold;
+    text-align: center;
 }
 
-section.gamesuit {
+h2 {
+
+    font-size: 20px;
+    color: #F9B23D;
+    font-family: Open sans;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gamesuit {
     margin-top: 3%;
     display: flex;
     flex-direction: row;
@@ -83,7 +93,9 @@ section.gamesuit {
     color: red;
     font-size: 80px;
     font-weight: bold;
-    width: 15%;
+    width: 20%;
+    position: relative;
+    text-align: center;
 }
 
 .reload {
@@ -91,9 +103,20 @@ section.gamesuit {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
     margin: 0 auto;
 }
 
 .reload:hover {
-    transform: scale(150%);
+    transform: scale(250%);
+}
+
+#out1game {
+    width: 150px;
+    height: 100px;
+    transform: rotate(-30deg);
+    background-color: green;
+    font-size: 15px;
+    color: blanchedalmond;
+    font-weight: bold;
 }
