@@ -25,20 +25,22 @@
     </header>
     <div class="gamesuit">
         <div class="boxoption">
-            <h3 id="OptionPick">Player</h3>
-            <button class="hand" onclick="OptionPick ('rock')"><img class="choice" src="assets/batu.png"></button>
-            <button class="hand" onclick="OptionPick ('scissors')"><img class="choice"
+            <h3>Player</h3>
+            <button class="hand" id="player_rock" onclick="optionPick ('rock')"><img class="choice"
+                    src="assets/batu.png"></button>
+            <button class="hand" id="player_scissors" onclick="optionPick ('scissors')"><img class="choice"
                     src="assets/gunting.png"></button>
-            <button class="hand" onclick="OptionPick ('paper')"><img class="choice" src="assets/kertas.png"></button>
+            <button class="hand" id="player_paper" onclick="optionPick ('paper')"><img class="choice"
+                    src="assets/kertas.png"></button>
         </div>
         <div class="cont" id="outgame">
             VS
         </div>
         <div class="boxoption">
-            <h3 id="ComputerSelection">Computer</h3>
-            <button class="hand"><img class="choice" src="assets/batu.png"></button>
-            <button class="hand"><img class="choice" src="assets/gunting.png"></button>
-            <button class="hand"><img class="choice" src="assets/kertas.png"></button>
+            <h3>Computer</h3>
+            <button class="hand" id="computer_rock"><img class="choice" src="assets/batu.png"></button>
+            <button class="hand" id="computer_scissors"><img class="choice" src="assets/gunting.png"></button>
+            <button class="hand" id="computer_paper"><img class="choice" src="assets/kertas.png"></button>
         </div>
     </div>
     <div>
@@ -47,6 +49,5 @@
 
 </body>
 <script src="main.js"></script>
-<script src="main2.js"></script>
 
 </html>

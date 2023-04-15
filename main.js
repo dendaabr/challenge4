@@ -7,17 +7,16 @@ class Start {
         this.wingame = " "
     }
 
-
-    get getYourOption() {
+    getYourOption() {
         return this.yourOption
     }
-    set setYourOption(option) {
+    setYourOption(option) {
         this.yourOption = option;
     }
-    get getComOption() {
+    getComOption() {
         return this.comOption
     }
-    set setComOption(option) {
+    setComOption(option) {
         this.comOption = option;
     }
 
@@ -55,11 +54,29 @@ class Start {
     }
 }
 
-function OptionPick(fingger) {
-
+function optionPick(finger) {
+    // menginisialisasi class start
     const start = new Start();
-    start.setYourOption = fingger;
-    start.setComOption = start.comProses();
+
+    // generate selected finger element ID
+    const btnIdPlayer = `player_${finger}`;
+
+
+    // memanipulasi/ mengganti kelas finger (player) menjadi hand active
+    document.getElementById(btnIdPlayer).className = "hand active";
+
+    // menyimpan parameter finger di class Start
+    start.setYourOption(finger);
+
+    // memilih pilihan finger komputer secara acak
+    const selectedComOption = start.comProses();
+    const btnIdComputer = `computer_${selectedComOption}`;
+
+    // lalu menyimpannya di variable setComOption di class 
+    start.setComOption(selectedComOption);
+
+
+    // Memilih penenang game
     start.winresult();
 
     const outgame = document.getElementById("outgame");
@@ -67,9 +84,12 @@ function OptionPick(fingger) {
 
     setTimeout(() => {
         outgame.innerHTML = `<div class="caseresult">${start.macthresult()}</div>`;
+        document.getElementById(btnIdComputer).className = "hand active";
     }, 1000);
-}
 
-function reload() {
-    location.reload();
+    // reload(){
+    //     array.forEach(element => {
+    //         document.getElementById(btnIdPlayer)
+    //     });
+    // }
 }
