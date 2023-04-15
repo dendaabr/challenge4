@@ -23,56 +23,53 @@ class Start {
 
 
     winresult() {
-        if (this.yourOption == "✊" && this.comOption == "🖖") {
+        if (this.yourOption == "rock" && this.comOption == "paper") {
             this.wingame = this.yourname
-        } else if (this.yourOption == "✊" && this.comOption == "🖐️") {
+        } else if (this.yourOption == "rock" && this.comOption == "scissors") {
             this.wingame = this.comname;
-        } else if (this.yourOption == "🖖" && this.comOption == "🖐️") {
+        } else if (this.yourOption == "paper" && this.comOption == "scissors") {
             this.wingame = this.yourname
-        } else if (this.yourOption == "🖖" && this.comOption == "✊") {
+        } else if (this.yourOption == "paper" && this.comOption == "rock") {
             this.wingame = this.comname;
-        } else if (this.yourOption == "🖐️" && this.comOption == "✊") {
+        } else if (this.yourOption == "scissors" && this.comOption == "rock") {
             this.wingame = this.yourname
-        } else if (this.yourOption == "🖐️" && this.comOption == "🖖") {
+        } else if (this.yourOption == "scissors" && this.comOption == "paper") {
             this.wingame = this.comname;
         } else {
-            return this.wingame = 'Draw'
+            this.wingame = 'Draw'
         }
     }
 
     comProses() {
-        const option = ["✊", "🖖", "🖐️"];
+        const option = ["rock", "paper", "scissors"];
         const bot = option[Math.floor(Math.random() * option.length)];
         return bot;
     }
 
     macthresult() {
         if (this.wingame !== 'Draw') {
-            return `${this.wingame} Won 😎`;
+            return `${this.wingame} Win`;
         } else {
-            return `${this.wingame} 😮‍💨`;
+            return `${this.wingame}`;
         }
     }
 }
 
 function OptionPick(fingger) {
+
     const start = new Start();
     start.setYourOption = fingger;
     start.setComOption = start.comProses();
     start.winresult();
 
-    // const ingame = document.getElementById("ingame");
     const outgame = document.getElementById("outgame");
-    const player = document.getElementById("player");
-    const computer = document.getElementById("computer");
-
-    // ingame.textContent = "..."
     outgame.textContent = "🤔"
 
     setTimeout(() => {
-        player.textContent = `${start.getYourOption}`
-        computer.textContent = `${start.getComOption}`
-        // ingame.textContent = `${start.getYourOption} vs ${start.getComOption}`
-        outgame.textContent = start.macthresult();
+        outgame.innerHTML = `<div class="caseresult">${start.macthresult()}</div>`;
     }, 1000);
+}
+
+function reload() {
+    location.reload();
 }
