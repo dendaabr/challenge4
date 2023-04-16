@@ -88,4 +88,10 @@ function optionPick(finger) {
 
 
     }, 1000;
+               
+}
+
+function reload() {
+    location.reload();
+    e.preventDefault();
 }
