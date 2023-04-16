@@ -86,16 +86,6 @@ function optionPick(finger) {
         outgame.innerHTML = `<div class="caseresult">${start.macthresult()}</div>`;
         document.getElementById(btnIdComputer).className = "hand active";
 
-//document.getElementById("hand").disabled = true;//
+
     }, 1000;
 }
-// Reset btn
-const Reset = document.getElementById('reset');
-
-// Reset btn event listener
-Reset.addEventListener("click", function (e) {
-
-  location.reload();
-
-  e.preventDefault();
-})
