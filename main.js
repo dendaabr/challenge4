@@ -86,9 +86,7 @@ function optionPick(finger) {
         outgame.innerHTML = `<div class="caseresult">${start.macthresult()}</div>`;
         document.getElementById(btnIdComputer).className = "hand active";
 
-
-    }, 1000;
-               
+    }), 1000;
 }
 
 function reload() {
