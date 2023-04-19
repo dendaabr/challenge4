@@ -19,44 +19,35 @@
 <body>
     <header>
         <div>
-            <a href="#" class="gotoback"> &lt; <img src="assets/logo 1.png"> </a>
+            <a href="#" class="gotoback"> &lt; <img class="logo" src="assets/logo 1.png"> </a>
         </div>
         <h3>ROCK PAPER SCISSORS</h3>
     </header>
-    <section id="gamesuit" class="gamesuit">
-        <div class="player1">
-            <div class="handimg">
-                <img src="assets/batu.png">
-            </div>
-            <div class="handimg">
-                <img src="assets/gunting.png">
-            </div>
-            <div class="handimg">
-                <img src="assets/kertas.png">
-            </div>
+    <div class="gamesuit">
+        <div class="boxoption">
+            <h3>Player</h3>
+            <button class="hand" id="player_rock" onclick="optionPick ('rock')"><img class="choice"
+                    src="assets/batu.png"></button>
+            <button class="hand" id="player_scissors" onclick="optionPick ('scissors')"><img class="choice"
+                    src="assets/gunting.png"></button>
+            <button class="hand" id="player_paper" onclick="optionPick ('paper')"><img class="choice"
+                    src="assets/kertas.png"></button>
         </div>
-        <div class="vs">
-            <div>
-                VS
-            </div>
-            <div>
-                <img src="assets/refresh.png">
-            </div>
+        <div class="cont" id="outgame">
+            VS
         </div>
-        <div class="com">
-            <div class="handimg">
-                <img src="assets/batu.png">
-            </div>
-            <div class="handimg">
-                <img src="assets/gunting.png">
-            </div>
-            <div class="handimg">
-                <img src="assets/kertas.png">
-            </div>
+        <div class="boxoption">
+            <h3>Computer</h3>
+            <button class="hand" id="computer_rock"><img class="choice" src="assets/batu.png"></button>
+            <button class="hand" id="computer_scissors"><img class="choice" src="assets/gunting.png"></button>
+            <button class="hand" id="computer_paper"><img class="choice" src="assets/kertas.png"></button>
         </div>
-    </section>
+    </div>
+    <div>
+        <button type="reset" class="hand" onclick="reload()"><img src="assets/refresh.png"></button>
+    </div>
 
 </body>
-<script src='main.js'></script>
+<script src="main.js"></script>
 
 </html>
