@@ -40,9 +40,10 @@ class Start {
     }
 
     comProses() {
+        // inisialisasi opsi-opsi yang tersedia ke dalam array
         const option = ["rock", "paper", "scissors"];
-        const bot = option[Math.floor(Math.random() * option.length)];
-        return bot;
+        const finger = option[Math.floor(Math.random() * option.length)];
+        return finger;
     }
 
     macthResult() {
@@ -74,6 +75,20 @@ function optionPick(finger) {
     // lalu menyimpannya di variable setComOption di class 
     start.setComOption(selectedComOption);
 
+    // disable unselected hand player dan komputer
+    // loop foreach semua finger
+
+    ["rock", "paper", "scissors"].forEach(element => {
+        // disabled unselected player finger
+        if (element !== finger) {
+            document.getElementById(`player_${element}`).disabled = true;
+        }
+        // disabled unselected computer finger
+        if (element !== selectedComOption) {
+            document.getElementById(`computer_${element}`).disabled = true;
+        }
+        console.log(finger);
+    });
 
     // Memilih penenang game
     start.winResult();
@@ -87,5 +102,5 @@ function optionPick(finger) {
 }
 
 function reload() {
-    location.reload('.gamesuit');
+    location.reload('.boxoption');
 }
