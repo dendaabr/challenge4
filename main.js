@@ -21,7 +21,7 @@ class Start {
     }
 
 
-    winresult() {
+    winResult() {
         if (this.yourOption == "rock" && this.comOption == "paper") {
             this.wingame = this.yourname
         } else if (this.yourOption == "rock" && this.comOption == "scissors") {
@@ -45,7 +45,7 @@ class Start {
         return bot;
     }
 
-    macthresult() {
+    macthResult() {
         if (this.wingame !== 'Draw') {
             return `${this.wingame} Win`;
         } else {
@@ -60,7 +60,6 @@ function optionPick(finger) {
 
     // generate selected finger element ID
     const btnIdPlayer = `player_${finger}`;
-
 
     // memanipulasi/ mengganti kelas finger (player) menjadi hand active
     document.getElementById(btnIdPlayer).className = "hand active";
@@ -77,19 +76,16 @@ function optionPick(finger) {
 
 
     // Memilih penenang game
-    start.winresult();
-
+    start.winResult();
     const outgame = document.getElementById("outgame");
     outgame.textContent = "🤔"
 
     setTimeout(() => {
-        outgame.innerHTML = `<div class="caseresult">${start.macthresult()}</div>`;
+        outgame.innerHTML = `<div class="caseresult">${start.macthResult()}</div>`;
         document.getElementById(btnIdComputer).className = "hand active";
-
-    }), 1000;
+    }, 1000);
 }
 
 function reload() {
-    location.reload();
-    e.preventDefault();
+    location.reload('.gamesuit');
 }

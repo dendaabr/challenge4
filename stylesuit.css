@@ -59,10 +59,9 @@ h2 {
 }
 
 .gamesuit {
-    margin-top: 3%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 50%;
     font-family: Open Sans;
 }
@@ -97,11 +96,13 @@ button {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: bisque;
     border-radius: 10%;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 
 }
 
 .active {
-    cursor: pointer;
+    pointer-events: none;
     transform: scale(120%);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: bisque;
@@ -122,15 +123,23 @@ button {
 }
 
 .caseresult {
-    width: 150px;
-    height: 100px;
+    margin-left: 30%;
+    width: 80px;
+    height: 30px;
     transform: rotate(-30deg);
     background-color: green;
-    font-size: 20px;
+    font-size: 17px;
     color: blanchedalmond;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
+    padding: 15px;
+}
 
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(15deg);
+    }
 }
